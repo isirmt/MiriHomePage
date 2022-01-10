@@ -21,7 +21,7 @@
 }
 
 .top-contents-miri {
-    width: min(85%, 100vh);
+    height: min(85%, 100vh);
     position: absolute;
     pointer-events: none;
     right: 0;
@@ -34,7 +34,6 @@
     height: min(100vw, 100vh);
     background-color: #373F51;
     position: absolute;
-    /* top:calc(min(100vw, 100vh) - 20vw); */
     top: 0;
     z-index: 108;
     justify-content: center;
@@ -50,4 +49,32 @@
     top: 5%;
     /* left: 5%; */
     pointer-events: none;
+}
+
+.top-contents-triangle-flow-1 {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    z-index: 101;
+    width: min(15%, 30vh);
+    animation: 2s ease-in-out 0s infinite alternate both triangle-flow;
+    -webkit-animation: 2s ease-in-out 0s infinite alternate both triangle-flow;
+}
+
+@keyframes triangle-flow {
+    from {
+        transform: translateY(0) rotateX(0) rotateZ(20deg);
+        -webkit-transform: translateY(0) rotateX(0) rotateZ(20deg);
+        -moz-transform: translateY(0) rotateX(0) rotateZ(20deg);
+        -ms-transform: translateY(0) rotateX(0) rotateZ(20deg);
+        -o-transform: translateY(0) rotateX(0) rotateZ(20deg);
+    }
+
+    to {
+        transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
+        -webkit-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
+        -moz-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
+        -ms-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
+        -o-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
+    }
 }
