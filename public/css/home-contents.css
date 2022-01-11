@@ -106,7 +106,7 @@
 }
 
 #top-contents-latest-music-button:checked~.top-contents-latest-music::after {
-    content:"CLOSING";
+    content: "CLOSING";
 }
 
 #top-contents-latest-music-button:checked~.top-contents-latest-music-close {
@@ -173,10 +173,15 @@
         position: absolute;
         z-index: 132;
         cursor: pointer;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
     }
 
     .top-contents-latest-music-close:hover~.top-contents-latest-music::after {
-        content: "CLOSE";
+        content: "-CLOSE-";
     }
 
 }
