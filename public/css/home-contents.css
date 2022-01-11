@@ -5,6 +5,7 @@
     position: relative;
     z-index: 100;
     overflow: hidden;
+    font-family: "smart-ui";
 }
 
 .top-contents-triangle-1 {
@@ -81,8 +82,83 @@
     right: 10%;
     z-index: 101;
     width: min(15%, 30vh);
-    animation: 2s ease-in-out 0s infinite alternate both triangle-flow;
-    -webkit-animation: 2s ease-in-out 0s infinite alternate both triangle-flow;
+    animation: 3s ease-in-out 0s infinite alternate both triangle-flow;
+    -webkit-animation: 3s ease-in-out 0s infinite alternate both triangle-flow;
+    pointer-events: none;
+}
+
+.top-contents-latest-music {
+    transition: ease-in-out 0.2s;
+    display: none;
+    -webkit-transition: ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+}
+
+#top-contents-latest-music-button:checked ~ .top-contents-latest-music {
+    transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
+    -webkit-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
+    -moz-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
+    -ms-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
+    -o-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
+}
+
+#top-contents-latest-music-button:checked ~ .top-contents-latest-music-close {
+    display: none;
+}
+
+@media (max-width: calc(100vh * 5 / 3)) {
+}
+
+@media (min-width: calc(100vh * 5 / 3) ) {
+    .top-contents-latest-music {
+        display: block;
+        position: absolute;
+        z-index: 130;
+        top: calc(min(100vw, 100vh) - calc(min(20vw, 30vh) * 9 / 16 * 1.7));
+        left: 30vw;
+        width:min(20vw, 30vh);
+        height: calc(min(20vw, 30vh) * 9 / 16);
+        border-style: solid;
+        border-color: #1B1B1E;
+        border-width: 0.4vw;
+        background-color: #1B1B1E;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+}
+
+    .top-contents-latest-music::after {
+        content: "LATEST";
+        letter-spacing: 0.3em;
+        background-color: #1B1B1E;
+        width: calc(min(20vw, 30vh) + 0.4vw);
+        height: calc(min(20vw, 30vh) / 5);
+        position: absolute;
+        top: calc(min(20vw, 30vh) * 9 / 16);
+        left: -0.4vw;
+        padding-top: calc(min(20vw, 30vh) * 9 / 16 / 10);
+        padding-left: 0.4vw;
+        font-family: "smart-ui";
+        color: white;
+        font-size: calc(min(20vw, 30vh) / 5 / 1.5);
+        text-align:center;
+    }
+
+    .top-contents-latest-music-close {
+        width: calc(min(20vw, 30vh) / 12);
+        height: calc(min(20vw, 30vh) / 12);
+        background-color: #58A4B0;
+        position: absolute;
+        z-index: 131;
+        top:calc(min(100vw, 100vh) - calc(min(20vw, 30vh) * 9 / 16 * 1.7) + calc(min(20vw, 30vh) * 9 / 16) + calc(min(20vw, 30vh) / 5));
+        left: 30vw;
+        cursor: pointer;
+    }
+    
 }
 
 @keyframes triangle-flow {
@@ -95,12 +171,12 @@
     }
 
     to {
-        transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
-        -webkit-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
-        -moz-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
-        -ms-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
-        -o-transform: translateY(min(100vw, 100vh)) rotateX(360deg) rotateZ(360deg) translateX(-20vw);
-    }
+        transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
+        -webkit-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
+        -moz-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
+        -ms-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
+        -o-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
+}
 }
 
 @keyframes box-ninja {
