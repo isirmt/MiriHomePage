@@ -91,7 +91,7 @@
     display: none;
 }
 
-#top-contents-latest-music-button:checked ~ .top-contents-latest-music {
+#top-contents-latest-music-button:checked~.top-contents-latest-music {
     transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
     -webkit-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
     -moz-transform: translateX(calc(-1 * min(20vw, 30vh) - 35vw));
@@ -102,23 +102,27 @@
     -moz-transition: ease-in-out 0.2s;
     -ms-transition: ease-in-out 0.2s;
     -o-transition: ease-in-out 0.2s;
+    opacity: 0;
 }
 
-#top-contents-latest-music-button:checked ~ .top-contents-latest-music-close {
+#top-contents-latest-music-button:checked~.top-contents-latest-music::after {
+    content:"CLOSING";
+}
+
+#top-contents-latest-music-button:checked~.top-contents-latest-music-close {
     display: none;
 }
 
-@media (max-width: calc(100vh * 5 / 3)) {
-}
+@media (max-width: calc(100vh * 5 / 3)) {}
 
-@media (min-width: calc(100vh * 5 / 3) ) {
+@media (min-width: calc(100vh * 5 / 3)) {
     .top-contents-latest-music {
         display: block;
         position: absolute;
         z-index: 130;
         top: calc(min(100vw, 100vh) - calc(min(20vw, 30vh) * 9 / 16 * 1.7));
         left: 30vw;
-        width:min(20vw, 30vh);
+        width: min(20vw, 30vh);
         height: calc(min(20vw, 30vh) * 9 / 16);
         border-style: solid;
         border-color: #1B1B1E;
@@ -129,7 +133,7 @@
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
-}
+    }
 
     .top-contents-latest-music::after {
         content: "LATEST";
@@ -145,7 +149,7 @@
         font-family: "smart-ui";
         color: white;
         font-size: calc(min(20vw, 30vh) / 5 / 1.5);
-        text-align:center;
+        text-align: center;
     }
 
     .top-contents-latest-music-close {
@@ -154,11 +158,27 @@
         background-color: #58A4B0;
         position: absolute;
         z-index: 131;
-        top:calc(min(100vw, 100vh) - calc(min(20vw, 30vh) * 9 / 16 * 1.7) + calc(min(20vw, 30vh) * 9 / 16) + calc(min(20vw, 30vh) / 5));
+        top: calc(min(100vw, 100vh) - calc(min(20vw, 30vh) * 9 / 16 * 1.7) + calc(min(20vw, 30vh) * 9 / 16) + calc(min(20vw, 30vh) / 5));
         left: 30vw;
         cursor: pointer;
     }
-    
+
+    .top-contents-latest-music-close:hover {
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: calc(min(20vw, 30vh) / 12) 0 0 calc(min(20vw, 30vh) / 12);
+        border-color: transparent transparent transparent #D8DBE2;
+        position: absolute;
+        z-index: 132;
+        cursor: pointer;
+    }
+
+    .top-contents-latest-music-close:hover~.top-contents-latest-music::after {
+        content: "CLOSE";
+    }
+
 }
 
 @keyframes triangle-flow {
@@ -176,7 +196,7 @@
         -moz-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
         -ms-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
         -o-transform: translateY(calc(min(100vw, 100vh) + 15vw)) rotateZ(450deg) translateX(-25vw);
-}
+    }
 }
 
 @keyframes box-ninja {
