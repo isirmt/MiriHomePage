@@ -12,3 +12,8 @@
 body {
     background-color: #373F51;
 }
+
+p {
+    color: #fff;
+    font-family: "smart-ui";
+}
