@@ -25,10 +25,61 @@
     position: absolute;
     z-index: 102;
     width: min(60vw, 60vh);
-    height: calc(min(8vw, 8vh) / 8);
+    height: calc(min(8vw, 8vh) / 10);
     top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
     left: 0;
     background-color: white;
-    background: repeating-linear-gradient(45deg, white 0, white min(1vw, 1vh), transparent min(1vw, 1vh), transparent calc(min(1vw, 1vh) * 2));
+    animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
+    -webkit-animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
+    border-style: solid;
+}
 
+.mc1-content1 {
+    position: absolute;
+    z-index: 103;
+    font-size: min(7vw, 7vh);
+    width: min(65vw, 65vh);
+    left: calc((100vw - min(65vw, 65vh)) / 2);
+    text-align: center;
+    top: min(15vw, 15vh);
+}
+
+@keyframes title-lineframe {
+    0% {
+        width: 0;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+        border-width: 0 min(0.5vw, 0.5vh) 0 0;
+        border-color: transparent #DC31C0 transparent transparent;
+    }
+    10% {
+        width: min(60vw, 60vh);
+        top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
+        left: 0;
+        border-width: 0;
+        border-color: transparent;
+    }
+    90% {
+        width: min(60vw, 60vh);
+        top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
+        left: 0;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
+    100% {
+        width: 0;
+        transform: translateX(min(60vw, 60vh));
+        -webkit-transform: translateX(min(60vw, 60vh));
+        -moz-transform: translateX(min(60vw, 60vh));
+        -ms-transform: translateX(min(60vw, 60vh));
+        -o-transform: translateX(min(60vw, 60vh));
+        border-width: 0 min(0.5vw, 0.5vh) 0 0;
+        border-color: transparent transparent transparent #DC31C0;
+    }
 }
