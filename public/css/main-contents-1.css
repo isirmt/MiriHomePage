@@ -1,8 +1,8 @@
 .mc1 {
     width: 100%;
-    height: min(100vw, 100vh);
+    height: calc(min(100vw, 100vh) * 0.7);
     /* background-color: #4e69a8; */
-    background-color: #373F51;
+    background-color: #1B1B1E;
     position: relative;
     z-index: 100;
     overflow: hidden;
@@ -37,11 +37,58 @@
 .mc1-content1 {
     position: absolute;
     z-index: 103;
+    width: min(70vw, 70vh);
+    height: calc(min(7vw, 7vh) * 1.5);
+    left: calc((100vw - min(70vw, 70vh)) / 8);
+    top: min(20vw, 20vh);
+    background-color: #1B1B1E;
+}
+
+.mc1-content1 .mc1-content1-text {
+    position: relative;
+    z-index: 104;
+    top: calc(min(7vw, 7vh) / 4);
+    left: 0;
     font-size: min(7vw, 7vh);
-    width: min(65vw, 65vh);
-    left: calc((100vw - min(65vw, 65vh)) / 2);
     text-align: center;
-    top: min(15vw, 15vh);
+}
+
+.mc1-content2 {
+    position: absolute;
+    z-index: 103;
+    width: min(70vw, 70vh);
+    height: calc(min(7vw, 7vh) * 1.5);
+    left: calc((100vw - min(70vw, 70vh)) / 2);
+    top: min(35vw, 35vh);
+    background-color: #1B1B1E;
+}
+
+.mc1-content2 .mc1-content2-text {
+    position: relative;
+    z-index: 104;
+    top: calc(min(7vw, 7vh) / 4);
+    left: 0;
+    font-size: min(7vw, 7vh);
+    text-align: center;
+}
+
+.mc1-chapters-box {
+    position: absolute;
+    z-index: 103;
+    width: min(75vw, 75vh);
+    left: calc((100vw - min(75vw, 75vh)) / 2);
+    top: min(55vw, 55vh);
+    background-color: #1B1B1E;
+}
+
+.mc1-chapters-box .mc1-chapters-text {
+    position: relative;
+    z-index: 104;
+    top: 0;
+    left: 0;
+    font-size: min(3vw, 3vh);
+    text-align: center;
+    word-break: break-all;
 }
 
 @keyframes title-lineframe {
@@ -55,6 +102,7 @@
         border-width: 0 min(0.5vw, 0.5vh) 0 0;
         border-color: transparent #DC31C0 transparent transparent;
     }
+
     10% {
         width: min(60vw, 60vh);
         top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
@@ -62,6 +110,7 @@
         border-width: 0;
         border-color: transparent;
     }
+
     90% {
         width: min(60vw, 60vh);
         top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
@@ -72,6 +121,7 @@
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
     }
+
     100% {
         width: 0;
         transform: translateX(min(60vw, 60vh));

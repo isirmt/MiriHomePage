@@ -1,7 +1,7 @@
 .bc {
     width: 100%;
     height: calc(min(100vw, 100vh) / 8);
-    background-color: #373F51;
+    background-color: #1B1B1E;
     position: relative;
     z-index: 100;
     overflow: hidden;
