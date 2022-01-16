@@ -13,7 +13,7 @@
     text-align: center;
     font-size: calc(min(8vw, 8vh));
     position: absolute;
-    z-index: 101;
+    z-index: 105;
     width: min(60vw, 60vh);
     top: min(5vw, 5vh);
     left: calc((100vw - min(60vw, 60vh)) / 2);
@@ -23,7 +23,7 @@
 .mc1-title-box::after {
     content: "";
     position: absolute;
-    z-index: 102;
+    z-index: 106;
     width: min(60vw, 60vh);
     height: calc(min(8vw, 8vh) / 10);
     top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
@@ -36,17 +36,16 @@
 
 .mc1-content1 {
     position: absolute;
-    z-index: 103;
+    z-index: 110;
     width: min(70vw, 70vh);
     height: calc(min(7vw, 7vh) * 1.5);
     left: calc((100vw - min(70vw, 70vh)) / 8);
     top: min(20vw, 20vh);
-    background-color: #1B1B1E;
 }
 
 .mc1-content1 .mc1-content1-text {
     position: relative;
-    z-index: 104;
+    z-index: 111;
     top: calc(min(7vw, 7vh) / 4);
     left: 0;
     font-size: min(7vw, 7vh);
@@ -55,17 +54,16 @@
 
 .mc1-content2 {
     position: absolute;
-    z-index: 103;
+    z-index: 110;
     width: min(70vw, 70vh);
     height: calc(min(7vw, 7vh) * 1.5);
     left: calc((100vw - min(70vw, 70vh)) / 2);
     top: min(35vw, 35vh);
-    background-color: #1B1B1E;
 }
 
 .mc1-content2 .mc1-content2-text {
     position: relative;
-    z-index: 104;
+    z-index: 111;
     top: calc(min(7vw, 7vh) / 4);
     left: 0;
     font-size: min(7vw, 7vh);
@@ -74,21 +72,54 @@
 
 .mc1-chapters-box {
     position: absolute;
-    z-index: 103;
+    z-index: 110;
     width: min(75vw, 75vh);
     left: calc((100vw - min(75vw, 75vh)) / 2);
     top: min(55vw, 55vh);
-    background-color: #1B1B1E;
 }
 
 .mc1-chapters-box .mc1-chapters-text {
     position: relative;
-    z-index: 104;
+    z-index: 111;
     top: 0;
     left: 0;
     font-size: min(3vw, 3vh);
     text-align: center;
     word-break: break-all;
+}
+
+.tri1 {
+    position: absolute;
+    z-index: 102;
+    width: min(13vw, 13vh);
+    top: 0;
+    left: min(5vw, 5vh);
+    animation: tri-falling 5s linear infinite 1s both;
+    -webkit-animation: tri-falling 5s linear infinite 1s both;
+}
+
+.tri2 {
+    position: absolute;
+    z-index: 102;
+    width: min(13vw, 13vh);
+    top: 0;
+    left: calc(100% - min(13vw, 13vh) - min(5vw, 5vh));
+    animation: tri-falling 5s linear infinite 0s both;
+    -webkit-animation: tri-falling 5s linear infinite 0s both;
+}
+
+@keyframes tri-falling {
+    from {
+        transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
+    }
+
+    to {
+        transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
+        -webkit-transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
+        -moz-transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
+        -ms-transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
+        -o-transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
+    }
 }
 
 @keyframes title-lineframe {

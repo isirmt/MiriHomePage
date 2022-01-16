@@ -19,11 +19,17 @@
     <link rel="stylesheet" href="./css/blank-contents.css">
     <link rel="stylesheet" href="./css/main-contents-1.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/loading.css">
 </head>
 
 <body>
     <header></header>
     <main>
+        <div id="loader">
+            <div class="spinner">
+                <p>- ITO MIRI -</p>
+            </div>
+        </div>
         <div class="tc">
             <div class="tc-triangle-1"></div>
             <img class="tc-miri" src="./img/itomiriIcon.svg">
@@ -36,14 +42,17 @@
                 <span></span>
             </label>
             <div class="tc-latest-music">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LDdGaXgjUcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LDdGaXgjUcU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
             <img class="tc-triangle-flow-1" src="./img/triangle.svg">
             <img class="tc-hexagon hex1" src="./img/hexagon1.svg">
             <img class="tc-hexagon hex2" src="./img/hexagon2.svg">
             <img class="tc-hexagon hex3" src="./img/hexagon3.svg">
             <img class="tc-hexagon hex4" src="./img/hexagon4.svg">
-            <img class="tc-hexagon hex5" src="./img/miri-flow.svg">
+            <img class="tc-hexagon hex5" src="./img/miri-flow.svg"> <!-- move to css -->
         </div>
         <div class="bc"><img src="./img/headphone.svg"></div>
         <div class="mc1">
@@ -51,7 +60,7 @@
                 <p class="mc1-title">ABOUT</p>
             </div>
             <div class="mc1-content1">
-                <p class="mc1-content1-text">作りたいものを作る</p>
+                <p class="mc1-content1-text anime-text-random">作りたいものを作る</p>
             </div>
             <div class="mc1-content2">
                 <p class="mc1-content2-text">作りたいものを形に</p>
@@ -64,11 +73,18 @@
                     「こういうのが無いから作りたい！」を実行します。<br>
                 </p>
             </div>
-            </div>
+            <img class="mc1-triangle tri1" src="./img/white-triangle.svg">
+            <img class="mc1-triangle tri2" src="./img/white-triangle.svg">
         </div>
         <div class="bc"><img src="./img/headphone.svg"></div>
     </main>
     <footer></footer>
+    <script>
+        window.onload = () => {
+            const loader = document.getElementById('loader');
+            loader.classList.add('loaded');
+        }
+    </script>
 </body>
 
 </html>
