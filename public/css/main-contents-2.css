@@ -59,6 +59,7 @@
 .mc2-article-image {
     z-index: 112;
     width: 100%;
+    opacity: 1;
 }
 
 .mc2-article-description-box {
