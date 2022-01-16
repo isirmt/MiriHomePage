@@ -9,31 +9,6 @@
     font-family: "smart-ui";
 }
 
-.mc1-title-box {
-    text-align: center;
-    font-size: calc(min(8vw, 8vh));
-    position: absolute;
-    z-index: 105;
-    width: min(60vw, 60vh);
-    top: min(5vw, 5vh);
-    left: calc((100vw - min(60vw, 60vh)) / 2);
-    overflow: hidden;
-}
-
-.mc1-title-box::after {
-    content: "";
-    position: absolute;
-    z-index: 106;
-    width: min(60vw, 60vh);
-    height: calc(min(8vw, 8vh) / 10);
-    top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
-    left: 0;
-    background-color: white;
-    animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
-    -webkit-animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
-    border-style: solid;
-}
-
 .mc1-content1 {
     position: absolute;
     z-index: 110;
@@ -70,6 +45,19 @@
     text-align: center;
 }
 
+.mc1-contents-outline {
+    position: absolute;
+    z-index: 110;
+    width: min(70vw, 70vh);
+    height: calc(min(7vw, 7vh) * 1.5);
+    left: calc((100vw - min(70vw, 70vh)) / 8);
+    top: min(20vw, 20vh);
+    border-style: solid;
+    border-color: white;
+    border-width: min(0.3vw, 0.3vh);
+    animation: mc1-box-moving 12s ease-in-out infinite 0s alternate both;
+}
+
 .mc1-chapters-box {
     position: absolute;
     z-index: 110;
@@ -86,6 +74,10 @@
     font-size: min(3vw, 3vh);
     text-align: center;
     word-break: break-all;
+}
+
+.mc1-triangle {
+    pointer-events: none;
 }
 
 .tri1 {
@@ -122,45 +114,32 @@
     }
 }
 
-@keyframes title-lineframe {
+@keyframes mc1-box-moving {
     0% {
-        width: 0;
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        border-width: 0 min(0.5vw, 0.5vh) 0 0;
-        border-color: transparent #DC31C0 transparent transparent;
+        transform: translateX(0) translateY(0);
+        opacity: 1;
     }
 
-    10% {
-        width: min(60vw, 60vh);
-        top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
-        left: 0;
-        border-width: 0;
-        border-color: transparent;
+    47% {
+        opacity: 1;
     }
 
-    90% {
-        width: min(60vw, 60vh);
-        top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
-        left: 0;
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
+    48% {
+        transform: translateX(0) translateY(0);
+        opacity: .3;
+    }    
+
+    57% {
+        transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        opacity: .3;
+    }
+
+    58% {
+        opacity: 1;
     }
 
     100% {
-        width: 0;
-        transform: translateX(min(60vw, 60vh));
-        -webkit-transform: translateX(min(60vw, 60vh));
-        -moz-transform: translateX(min(60vw, 60vh));
-        -ms-transform: translateX(min(60vw, 60vh));
-        -o-transform: translateX(min(60vw, 60vh));
-        border-width: 0 min(0.5vw, 0.5vh) 0 0;
-        border-color: transparent transparent transparent #DC31C0;
+        transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        opacity: 1;
     }
 }
