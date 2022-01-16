@@ -56,6 +56,7 @@
     border-color: white;
     border-width: min(0.3vw, 0.3vh);
     animation: mc1-box-moving 12s ease-in-out infinite 0s alternate both;
+    -webkit-animation: mc1-box-moving 12s ease-in-out infinite 0s alternate both;
 }
 
 .mc1-chapters-box {
@@ -103,7 +104,11 @@
 @keyframes tri-falling {
     from {
         transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
-    }
+        -webkit-transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
+        -moz-transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
+        -ms-transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
+        -o-transform: translateY(calc(-1 * min(13vw, 13vh))) rotateZ(0deg);
+}
 
     to {
         transform: translateY(calc(min(100vw, 100vh) * 0.7)) rotateZ(360deg);
@@ -118,7 +123,11 @@
     0% {
         transform: translateX(0) translateY(0);
         opacity: 1;
-    }
+        -webkit-transform: translateX(0) translateY(0);
+        -moz-transform: translateX(0) translateY(0);
+        -ms-transform: translateX(0) translateY(0);
+        -o-transform: translateX(0) translateY(0);
+}
 
     47% {
         opacity: 1;
@@ -127,12 +136,20 @@
     48% {
         transform: translateX(0) translateY(0);
         opacity: .3;
-    }    
+        -webkit-transform: translateX(0) translateY(0);
+        -moz-transform: translateX(0) translateY(0);
+        -ms-transform: translateX(0) translateY(0);
+        -o-transform: translateX(0) translateY(0);
+}    
 
     57% {
         transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
         opacity: .3;
-    }
+        -webkit-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -moz-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -ms-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -o-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+}
 
     58% {
         opacity: 1;
@@ -141,5 +158,9 @@
     100% {
         transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
         opacity: 1;
-    }
+        -webkit-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -moz-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -ms-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+        -o-transform: translateX(calc((100vw - min(70vw, 70vh)) / 2 - (100vw - min(70vw, 70vh)) / 8)) translateY(calc(min(35vw, 35vh) - min(20vw, 20vh)));
+}
 }
