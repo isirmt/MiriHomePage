@@ -66,8 +66,8 @@
     position: absolute;
     z-index: 113;
     left: 0;
-    top: calc(max(22vw, 22vh) * 0.8 - max(22vw, 22vh) * 0.8 / 3);
-    min-height: calc(max(22vw, 22vh) * 0.8 / 3);
+    top: calc(max(22vw, 22vh) * 0.8 - max(22vw, 22vh) * 0.8 * 0.33);
+    min-height: calc(max(22vw, 22vh) * 0.8 * 0.33);
     width: 100%;
     background-color: #fff;
     border-style: solid;
@@ -149,5 +149,31 @@
         -moz-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         -o-transform: translateX(-100%);
+    }
+}
+
+@media (max-width: calc(100vh * 10 / 16)) {
+    .mc2-article-box {
+        width: 76vw;
+        height: calc(76vw * 0.8);
+    }
+
+    .mc2-article-description-box {
+        position: absolute;
+        z-index: 113;
+        left: 0;
+        top: calc(76vw * 0.8 - 76vw * 0.8 * 0.33);
+        min-height: calc(max(22vw, 22vh) * 0.8 * 0.33);
+        width: 100%;
+        background-color: #fff;
+        border-style: solid;
+        border-width: max(.2vw, .2vh) 0 0 0;
+        border-color: #000;
+    }
+
+    .mc2-article-image-box {
+        width: 100%;
+        height: calc(76vw * 0.8 - 76vw * 0.8 / 3);
+        overflow: hidden;
     }
 }
