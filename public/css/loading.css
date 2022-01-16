@@ -1,7 +1,6 @@
 @keyframes fadeOut {
     from {
         opacity: 1;
-        z-index: 1000;
     }
     to {
         display: none;
@@ -17,6 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
     /* 環境によって「z-index」追加 */
 }
 /* 読み込み完了後に「loaded」を付与する */
