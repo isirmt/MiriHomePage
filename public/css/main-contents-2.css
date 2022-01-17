@@ -1,6 +1,6 @@
 .mc2 {
     width: 100%;
-    height: calc(min(100vw, 100vh) * 1);
+    height: calc(min(25vw, 25vh) + calc(max(24vw, 24vh) * 0.8) * 2.4);
     /* background-color: #4e69a8; */
     background-color: #1B1B1E;
     position: relative;
@@ -15,7 +15,7 @@
     top: min(20vw, 20vh);
     left: 10vw;
     width: 80vw;
-    height: min(70vw, 70vh);
+    height: calc(max(24vw, 24vh) * 0.8 * 2.3);
     border-style: solid;
     border-width: min(.5vw, .5vh) 0;
     border-color: white;
@@ -49,6 +49,7 @@
     -o-border-radius: min(1vw, 1vh);
     -webkit-filter: drop-shadow(min(0.4vw, 0.4vh) min(0.4vw, 0.4vh) min(0.4vw, 0.4vh) black);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .mc2-article-box-next {
@@ -68,6 +69,7 @@
     -o-border-radius: min(1vw, 1vh);
     -webkit-filter: drop-shadow(min(0.4vw, 0.4vh) min(0.4vw, 0.4vh) min(0.4vw, 0.4vh) black);
     overflow: hidden;
+    cursor: pointer;
 }
 
 .mc2-article-image-box {
