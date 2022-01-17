@@ -186,7 +186,7 @@
 @media (max-width: calc(100vh * 1 / 1)) {
     .mc2 {
         width: 100%;
-        height: calc(min(100vw, 100vh) * 4);
+        height: calc(min(100vw, 100vh) * 3.5);
         /* background-color: #4e69a8; */
         background-color: #1B1B1E;
         position: relative;
