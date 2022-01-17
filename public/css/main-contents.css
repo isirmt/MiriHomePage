@@ -18,12 +18,12 @@
     top: calc(min(8vw, 8vh) - min(0.7vw, 0.7vh));
     left: 0;
     background-color: white;
-    animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
-    -webkit-animation: title-lineframe 5s ease-in-out infinite 0s alternate both;
+    animation: title-line-frame 5s ease-in-out infinite 0s alternate both;
+    -webkit-animation: title-line-frame 5s ease-in-out infinite 0s alternate both;
     border-style: solid;
 }
 
-@keyframes title-lineframe {
+@keyframes title-line-frame {
     0% {
         width: 0;
         transform: translateX(0);
