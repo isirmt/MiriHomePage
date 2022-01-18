@@ -248,7 +248,7 @@
 
     .mc2-article-summary {
         width: 96%;
-        height: max(3vw, 3vh);
+        height: max(2vw, 2vh);
         margin: 2% 2% 0 2%;
         border-style: solid;
         border-width: 0 0 max(.2vw, .2vh) 0;
@@ -259,7 +259,7 @@
     .mc2-article-summary p {
         color: #000;
         white-space: nowrap;
-        font-size: max(3vw, 3vh);
+        font-size: max(2vw, 2vh);
     }
 
     .mc2-article-description {
@@ -271,6 +271,6 @@
 
     .mc2-article-description p {
         color: #000;
-        font-size: max(1.8vw, 1.8vh);
+        font-size: max(1.5vw, 1.5vh);
     }
 }
