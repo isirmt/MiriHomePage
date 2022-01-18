@@ -31,7 +31,7 @@ url.forEach(function (elem, i) {
             if (prop == 'og:image'){
                 $(i_arr[i]).attr('src', v.getAttribute("content"));
             }
-            console.log(prop, v.getAttribute("content"))
+            // console.log(prop, v.getAttribute("content"))
         })
     })
 })
