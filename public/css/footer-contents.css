@@ -58,7 +58,7 @@
     width: min(20vw, 20vh);
     z-index: 130;
     pointer-events: all;
-    top: calc(min(28vw, 28vh) - min(20vw, 20vh));
+    top: calc(min(28vw, 28vh) - min(24vw, 24vh));
     left: calc(97% - min(20vw, 20vh));
 }
 
@@ -83,4 +83,34 @@
         -ms-transform: rotateZ(360deg);
         -o-transform: rotateZ(360deg);
     }
+}
+
+@media (max-width: 767px) {
+    .f-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        display: block;
+        z-index: 110;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .f-circle {
+        display: none;
+    }
+
+    .f-heading {
+        font-size: min(5vw, 5vh);
+    }
+
+    .f-production {
+        font-size: min(3.5vw, 3.5vh);
+    }
+
+    .f-copyright {
+        font-size: min(2.6vw, 2.6vh);
+    }
+
 }
