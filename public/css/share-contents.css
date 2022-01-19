@@ -1,0 +1,59 @@
+.share-contents {
+    width: 100%;
+    background-color: #1B1B1E;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+    font-family: "smart-ui";
+}
+
+.share-row1 {
+    display: flex;
+    margin: max(3vw, 3vh) auto;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.share-row1 a {
+    width: 20vw;
+    height: min(10vw, 10vh);
+    font-size: min(4.5vw, 4.5vh);
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: min(0.5vw, 0.5vh);
+    border-color: #fff;
+    background-color: #1B1B1E;
+    z-index: 111;
+    overflow: hidden;
+}
+
+.share-row1 span {
+    position: relative;
+    top: calc((min(10vw, 10vh) - min(4.5vw, 4.5vh)) / 2);
+    color: white;
+}
+
+.share-row1 a:hover {
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.share-t:hover {
+    background-color: #2989d8;
+}
+
+.share-y:hover {
+    background-color: #a82b22;
+}
+
+.share-n:hover {
+    background-color: #ffffff;
+}
+
+.share-n:hover span {
+    color: #000;
+}
