@@ -72,6 +72,7 @@
 .article-top #title {
     font-size: min(3.5vw, 3.5vh);
     font-weight: bold;
+    font-family: "smart-ui";
 }
 
 .article-top #date {
@@ -107,12 +108,12 @@
     }
     
     .article-top #title {
-        font-size: min(3.5vw, 3.5vh);
+        font-size: min(5vw, 5vh);
         font-weight: bold;
     }
     
     .article-top #date {
-        font-size: min(2vw, 2vh);
+        font-size: min(3vw, 3vh);
     }
 
     .article #YouTube {
