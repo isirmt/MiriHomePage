@@ -77,6 +77,7 @@
 
 .article-top #date {
     font-size: min(2vw, 2vh);
+    font-family: "smart-ui";
 }
 
 .article p {
