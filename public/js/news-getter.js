@@ -6,10 +6,13 @@ const url = [
     "https://miri-home-page.vercel.app/article/202201181"
 ];
 
-var t_arr = ['.nt1', '.nt2', '.nt3', '.nt4', '.nt5'];
-var d_arr = ['.nd1', '.nd2', '.nd3', '.nd4', '.nd5'];
-var u_arr = ['.nu1', '.nu2', '.nu3', '.nu4', '.nu5'];
-var i_arr = ['.ni1', '.ni2', '.ni3', '.ni4', '.ni5'];
+// const url = [
+//     "https://isirmt.d3bu.net/article/",
+//     "https://isirmt.d3bu.net/article/readme/",
+//     "https://isirmt.d3bu.net/article/",
+//     "https://isirmt.d3bu.net/",
+//     "https://isirmt.d3bu.net/article/versions-file/"
+// ];
 
 url.forEach(function (elem, i) {
     fetch(elem).then(res => res.text()).then(text => {
@@ -20,18 +23,17 @@ url.forEach(function (elem, i) {
             if (!prop) return;
 
             if (prop == 'og:title'){
-                $(t_arr[i]).html(v.getAttribute("content"));
+                $(".nt"+[i+1]).html(v.getAttribute("content"));
             }
             if (prop == 'og:description'){
-                $(d_arr[i]).html(v.getAttribute("content"));
+                $(".nd"+[i+1]).html(v.getAttribute("content"));
             }
             if (prop == 'og:url'){
-                $(u_arr[i]).attr('href', v.getAttribute("content"));
+                $(".nu"+[i+1]).attr('href', v.getAttribute("content"));
             }
             if (prop == 'og:image'){
-                $(i_arr[i]).attr('src', v.getAttribute("content"));
+                $(".ni"+[i+1]).attr('src', v.getAttribute("content"));
             }
-            // console.log(prop, v.getAttribute("content"))
         })
     })
 })
