@@ -8,60 +8,6 @@
     pointer-events: none;
 }
 
-.share-contents::after {
-    content: "";
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    background-color: #373F51;
-    top: 0%;
-    left: -50%;
-    z-index: 101;
-    transition: all 0.2s ease-in-out 1s;
-    -webkit-transition: all 0.2s ease-in-out 1s;
-    -moz-transition: all 0.2s ease-in-out 1s;
-    -ms-transition: all 0.2s ease-in-out 1s;
-    -o-transition: all 0.2s ease-in-out 1s;
-}
-
-.share-contents:hover::after {
-    left: 0;
-    top: 0;
-    z-index: 101;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-}
-
-.share-contents::before {
-    content: "";
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    background-color: #373F51;
-    top: 0%;
-    left: 100%;
-    z-index: 101;
-    transition: all 0.2s ease-in-out 1s;
-    -webkit-transition: all 0.2s ease-in-out 1s;
-    -moz-transition: all 0.2s ease-in-out 1s;
-    -ms-transition: all 0.2s ease-in-out 1s;
-    -o-transition: all 0.2s ease-in-out 1s;
-}
-
-.share-contents:hover::before {
-    left: 50%;
-    top: 0;
-    z-index: 101;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-}
-
 .share-row1, .share-row2 {
     display: flex;
     margin: max(3vw, 3vh) auto;
