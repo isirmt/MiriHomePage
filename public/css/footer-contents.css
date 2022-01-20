@@ -4,6 +4,7 @@
     height: min(30vw, 30vh);
     /* padding: min(6vw, 6vh); */
     justify-content: space-between;
+    background-color: #1B1B1E;
     display: flex;
     z-index: 110;
     overflow: hidden;

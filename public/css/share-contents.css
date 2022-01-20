@@ -7,7 +7,7 @@
     font-family: "smart-ui";
 }
 
-.share-row1 {
+.share-row1, .share-row2 {
     display: flex;
     margin: max(3vw, 3vh) auto;
     width: 70%;
@@ -28,13 +28,33 @@
     overflow: hidden;
 }
 
+.share-row2 a {
+    width: 20vw;
+    height: min(5vw, 5vh);
+    font-size: min(3.5vw, 3.5vh);
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: min(0.5vw, 0.5vh);
+    border-color: #fff;
+    background-color: #1B1B1E;
+    z-index: 111;
+    overflow: hidden;
+}
+
 .share-row1 span {
     position: relative;
     top: calc((min(10vw, 10vh) - min(4.5vw, 4.5vh)) / 2);
     color: white;
 }
 
-.share-row1 a:hover {
+.share-row2 span {
+    position: relative;
+    top: calc((min(5vw, 5vh) - min(3.5vw, 3.5vh)) / 2);
+    color: white;
+}
+
+.share-row1 a:hover, .share-row2 a:hover {
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
@@ -52,6 +72,14 @@
 
 .share-n:hover {
     background-color: #ffffff;
+}
+
+.share-s:hover {
+    background-color: #d46423;
+}
+
+.share-g:hover {
+    background-color: #000000;
 }
 
 .share-n:hover span {

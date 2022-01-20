@@ -4,7 +4,7 @@
     height: min(10vw, 10vh);
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 110;
     background-color: #373f51;
 }
 
@@ -32,6 +32,7 @@
     text-align: center;
     margin: min(5vw, 5vh) 0;
     font-size: min(4vw, 4vh);
+    overflow: hidden;
 }
 
 .article-top {
@@ -107,12 +108,12 @@
     .article p {
         font-size: min(4vw, 4vh);
     }
-    
+
     .article-top #title {
         font-size: min(5vw, 5vh);
         font-weight: bold;
     }
-    
+
     .article-top #date {
         font-size: min(3vw, 3vh);
     }
