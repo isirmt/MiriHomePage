@@ -35,3 +35,4 @@ foreach ($dirs as $dir) {
     }
 }
 // echo '</ul>', "\n";
+?>
