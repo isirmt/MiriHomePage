@@ -80,7 +80,8 @@
         <div class="share-contents">
             <div class="share-row1">
                 <a href="http://twitter.com/ItoMiri" class="share-t"><span>Twitter</span></a>
-                <a href="https://www.youtube.com/channel/UC1uO5CcNNQI6TlAGxckup1A" class="share-y"><span>YouTube</span></a>
+                <a href="https://www.youtube.com/channel/UC1uO5CcNNQI6TlAGxckup1A"
+                    class="share-y"><span>YouTube</span></a>
                 <a href="https://www.nicovideo.jp/user/118078888" class="share-n"><span>niconico</span></a>
             </div>
             <div class="share-row2">
@@ -117,86 +118,50 @@
                 <p class="mc-title">NEWS</p>
             </div>
             <div class="mc2-article-area">
-                <span class="mc2-article-box">
-                    <a href="http://twitter.com/" class="nu1">
-                        <div class="mc2-article-image-box">
-                            <img class="mc2-article-image ni1" src="">
-                        </div>
-
+                <span class="mc2-article-box"><a href="" class="nu1">
+                        <div class="mc2-article-image-box"><img class="mc2-article-image ni1" src=""></div>
                         <div class="mc2-article-description-box">
                             <div class="mc2-article-summary">
-                                <p class="nt1">
-                                    タイトル
-                                </p>
+                                <p class="nt1">タイトル</p>
                             </div>
                             <div class="mc2-article-description">
-                                <p class="nd1">
-                                    説明
-                                </p>
+                                <p class="nd1">説明</p>
                             </div>
                         </div>
-                    </a>
-                </span>
-                <span class="mc2-article-box">
-                    <a href="" class="nu2">
-                        <div class="mc2-article-image-box">
-                            <img class="mc2-article-image ni2" src="">
-                        </div>
-
+                    </a></span>
+                <span class="mc2-article-box"><a href="" class="nu2">
+                        <div class="mc2-article-image-box"><img class="mc2-article-image ni2" src=""></div>
                         <div class="mc2-article-description-box">
                             <div class="mc2-article-summary">
-                                <p class="nt2">
-                                    タイトル
-                                </p>
+                                <p class="nt2">タイトル</p>
                             </div>
                             <div class="mc2-article-description">
-                                <p class="nd2">
-                                    説明
-                                </p>
+                                <p class="nd2">説明</p>
                             </div>
                         </div>
-                    </a>
-                </span>
-                <span class="mc2-article-box">
-                    <a href="" class="nu3">
-                        <div class="mc2-article-image-box">
-                            <img class="mc2-article-image ni3" src="">
-                        </div>
-
+                    </a></span>
+                <span class="mc2-article-box"><a href="" class="nu3">
+                        <div class="mc2-article-image-box"><img class="mc2-article-image ni3" src=""></div>
                         <div class="mc2-article-description-box">
                             <div class="mc2-article-summary">
-                                <p class="nt3">
-                                    タイトル
-                                </p>
+                                <p class="nt3">タイトル</p>
                             </div>
                             <div class="mc2-article-description">
-                                <p class="nd3">
-                                    説明
-                                </p>
+                                <p class="nd3">説明</p>
                             </div>
                         </div>
-                    </a>
-                </span>
-                <span class="mc2-article-box">
-                    <a href="" class="nu4">
-                        <div class="mc2-article-image-box">
-                            <img class="mc2-article-image ni4" src="">
-                        </div>
-
+                    </a></span>
+                <span class="mc2-article-box"><a href="" class="nu4">
+                        <div class="mc2-article-image-box"><img class="mc2-article-image ni4" src=""></div>
                         <div class="mc2-article-description-box">
                             <div class="mc2-article-summary">
-                                <p class="nt4">
-                                    タイトル
-                                </p>
+                                <p class="nt4">タイトル</p>
                             </div>
                             <div class="mc2-article-description">
-                                <p class="nd4">
-                                    説明
-                                </p>
+                                <p class="nd4">説明</p>
                             </div>
                         </div>
-                    </a>
-                </span>
+                    </a></span>
                 <span class="mc2-article-box">
                     <a href="" class="nu5">
                         <div class="mc2-article-image-box">
@@ -225,6 +190,7 @@
                     </a>
                 </span>
             </div>
+            <?php include ('./php/latest-news.php');>
         </div>
         <div class="bc"><img src="./img/headphone.svg"></div>
         <div class="mc3">
@@ -277,13 +243,15 @@
             <span>
                 <p class="f-heading"><a href="./">Ito Miri - 井筒 ミリ -</a></p>
                 <p class="f-copyright">&copy;2022 ItoMiri</p>
-                <p class="f-production"><a href="https://www.youtube.com/channel/UC1uO5CcNNQI6TlAGxckup1A">YouTube</a></p>
+                <p class="f-production"><a href="https://www.youtube.com/channel/UC1uO5CcNNQI6TlAGxckup1A">YouTube</a>
+                </p>
                 <p class="f-production"><a href="https://www.nicovideo.jp/user/118078888">niconico</a></p>
                 <p class="f-production"><a href="https://twitter.com/ItoMiri">Twitter</a></p>
                 <p class="f-production"><a href="https://soundcloud.com/user-659804378">SoundCloud</a></p>
                 <p class="f-production"><a href="https://github.com/isirmt">Github1</a></p>
                 <p class="f-production"><a href="https://github.com/ItoMiri">Github2</a></p>
-                <img class="f-circle" src="./img/circle3.svg" onMouseDown="return false;" onSelectStart="return false" oncontextmenu="return false;">
+                <img class="f-circle" src="./img/circle3.svg" onMouseDown="return false;" onSelectStart="return false"
+                    oncontextmenu="return false;">
             </span>
         </div>
     </footer>
