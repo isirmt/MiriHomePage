@@ -1,5 +1,26 @@
 {
     "github": {
         "silent": true
-    }
+    },
+    "regions": [
+        "hnd1"
+    ],
+    "functions": {
+        "public/php/*.php": {
+            "runtime": "vercel-php@0.4.0"
+        }
+    },
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/.*",
+            "dest": "/404.html"
+        }
+    ]
 }
