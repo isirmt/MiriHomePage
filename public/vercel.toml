@@ -5,6 +5,11 @@
       "runtime": "vercel-php@0.3.1"
     }
   },
+  "functions": {
+    "./*.html": {
+      "runtime": "vercel-php@0.3.1"
+    }
+  },
   "routes": [
     { "src": "/(.*)", "dest": "/$1" },
     { "handle": "filesystem" },
