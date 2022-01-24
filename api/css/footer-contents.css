@@ -1,0 +1,117 @@
+.f-box {
+    position: relative;
+    width: 100%;
+    height: min(30vw, 30vh);
+    /* padding: min(6vw, 6vh); */
+    justify-content: space-between;
+    background-color: #1B1B1E;
+    display: flex;
+    z-index: 110;
+    overflow: hidden;
+}
+
+.f-box span {
+    width: 47%;
+    height: 100%;
+    margin: 1.5%;
+    overflow: hidden;
+    position: relative;
+    z-index: 111;
+}
+
+.f-heading {
+    margin-top: min(1vw, 1vh);
+    font-size: min(3vw, 3vh);
+    position: relative;
+    z-index: 112;
+}
+
+.f-heading a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 112;
+}
+
+.f-production {
+    margin-top: min(1vw, 1vh);
+    margin-left: min(1vw, 1vh);
+    font-size: min(2vw, 2vh);
+    position: relative;
+    z-index: 112;
+}
+
+.f-production a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 112;
+}
+
+.f-copyright {
+    font-size: min(1.5vw, 1.5vh);
+    position: relative;
+    z-index: 112;
+}
+
+.f-circle {
+    position: absolute;
+    width: min(20vw, 20vh);
+    z-index: 130;
+    pointer-events: all;
+    top: calc(min(28vw, 28vh) - min(24vw, 24vh));
+    left: calc(97% - min(20vw, 20vh));
+}
+
+.f-circle:hover {
+    animation: f-circle-rotate 2s linear infinite 0s both;
+    -webkit-animation: f-circle-rotate 2s linear infinite 0s both;
+}
+
+@keyframes f-circle-rotate {
+    from {
+        transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+        -moz-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+        -o-transform: rotateZ(0);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+
+@media (max-width: 767px) {
+    .f-box {
+        position: relative;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        display: block;
+        z-index: 110;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .f-circle {
+        display: none;
+    }
+
+    .f-heading {
+        font-size: min(5vw, 5vh);
+    }
+
+    .f-production {
+        font-size: min(3.5vw, 3.5vh);
+    }
+
+    .f-copyright {
+        font-size: min(2.6vw, 2.6vh);
+    }
+
+}
