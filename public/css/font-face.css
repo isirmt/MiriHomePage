@@ -2,3 +2,8 @@
     font-family: "smart-ui";
     src: url(../fonts/03スマートフォントUI.otf);
 }
+
+@font-face {
+    font-family: "code";
+    src: url(../fonts/RobotoMono-Medium.ttf);
+}

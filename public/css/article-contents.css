@@ -87,10 +87,46 @@
     font-size: min(2vw, 2vh);
 }
 
+.article .markdown {
+    margin-bottom: 1em;
+    background-color: #1B1B1E;
+    width: calc(50vw);
+    padding: 1em;
+    font-size: min(1.7vw, 1.7vh);
+    border-radius: min(1vw, 1vh);
+    -webkit-border-radius: min(1vw, 1vh);
+    -moz-border-radius: min(1vw, 1vh);
+    -ms-border-radius: min(1vw, 1vh);
+    -o-border-radius: min(1vw, 1vh);
+    counter-reset: line-number;
+    font-family: "code";
+}
+
+.article .markdown p {
+    color: #fff;
+    font-size: min(1.7vw, 1.7vh);
+    margin-bottom: 0.3em;
+    counter-increment: line-number;
+    display: list-item;
+    padding-left: 1rem;
+    margin-left: 1rem;
+    word-break: break-all;
+}
+
+.article .markdown p::marker {
+    content: counter(line-number);
+    color: #aaa;
+}
+
 .article #YouTube {
     display: block;
     width: min(35vw, 35vh);
     height: calc(min(35vw, 35vh) / 16 * 9);
+}
+
+.article img {
+    display: block;
+    width: min(35vw, 35vh);
 }
 
 @media (max-width: 767px) {
@@ -122,5 +158,25 @@
         display: block;
         width: 75vw;
         height: calc(75vw / 16 * 9);
+    }
+
+    .article img {
+        display: block;
+        width: 75vw;
+    }
+
+    .article .markdown {
+        width: 75vw;
+        font-size: min(3.7vw, 3.7vh);
+        border-radius: min(1.5vw, 1.5vh);
+        -webkit-border-radius: min(1.5vw, 1.5vh);
+        -moz-border-radius: min(1.5vw, 1.5vh);
+        -ms-border-radius: min(1.5vw, 1.5vh);
+        -o-border-radius: min(1.5vw, 1.5vh);
+}
+    
+    .article .markdown p {
+        font-size: min(3.7vw, 3.7vh);
+        word-break: break-all;
     }
 }
