@@ -100,6 +100,7 @@
     -o-border-radius: min(1vw, 1vh);
     counter-reset: line-number;
     font-family: "code";
+    overflow: hidden;
 }
 
 .article .markdown p {
@@ -127,6 +128,77 @@
 .article img {
     display: block;
     width: min(35vw, 35vh);
+}
+
+.article .ogp {
+    position: relative;
+    width: 50vw;
+    height: min(10vw, 10vh);
+    font-size: min(2vw, 2vh);
+}
+
+.article .ogp div {
+    border-style: solid;
+    border-width: min(0.3vw, 0.3vh);
+    border-color: #aaa;
+    border-radius: min(1vw, 1vh);
+    -webkit-border-radius: min(1vw, 1vh);
+    -moz-border-radius: min(1vw, 1vh);
+    -ms-border-radius: min(1vw, 1vh);
+    -o-border-radius: min(1vw, 1vh);
+    height: min(10vw, 10vh);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.article .ogp #url {
+    position: absolute;
+    left: calc(min(25%, calc(min(10vw, 10vh) * 16 / 9)) + 2%);
+    top: min(8vw, 8vh);
+    font-size: min(1vw, 1vh);
+    text-decoration: none;
+    color: #777;
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.article .ogp #img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: min(25%, calc(min(10vw, 10vh) * 16 / 9));
+    height: min(10vw, 10vh);
+    overflow: hidden;
+    border: solid #aaa;
+    border-width: 0 min(.2vw, .2vh) 0 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.article .ogp #img img {
+    width: calc(min(10vw, 10vh) * 16 / 9);
+    height: 100%;
+    position: relative;
+    left: calc((min(10vw, 10vh) * 16 / 9 - 100%) / 2 * -1);
+    pointer-events: none;
+
+}
+
+.article .ogp #title {
+    position: absolute;
+    left: calc(min(25%, calc(min(10vw, 10vh) * 16 / 9)) + 2%);
+    top: min(2.5vw, 2.5vh);
+    font-size: min(2.2vw, 2.2vh);
+    color: #000;
+    font-weight: bold;
+    font-family: "smart-ui";
+    word-break: keep-all;
+    white-space: nowrap;
 }
 
 @media (max-width: 767px) {
@@ -160,23 +232,31 @@
         height: calc(75vw / 16 * 9);
     }
 
-    .article img {
+    .article .img {
         display: block;
         width: 75vw;
     }
 
     .article .markdown {
-        width: 75vw;
+        width: 90%;
         font-size: min(3.7vw, 3.7vh);
         border-radius: min(1.5vw, 1.5vh);
         -webkit-border-radius: min(1.5vw, 1.5vh);
         -moz-border-radius: min(1.5vw, 1.5vh);
         -ms-border-radius: min(1.5vw, 1.5vh);
         -o-border-radius: min(1.5vw, 1.5vh);
-}
-    
+    }
+
     .article .markdown p {
         font-size: min(3.7vw, 3.7vh);
         word-break: break-all;
+    }
+
+    .article .ogp #title {
+        font-size: min(4vw, 4vh);
+    }
+
+    .article .ogp #url {
+        font-size: min(2vw, 2vh);
     }
 }
