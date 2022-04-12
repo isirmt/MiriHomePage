@@ -32,6 +32,7 @@
 @media (min-width: 768px) {
     .p-song::before {
         content: counter(songs-number);
+        font-family: "smart-ui";
         position: absolute;
         left: calc((min(6vw, 6vh)) * -1);
         top: calc((min(1vw, 1vh)) * -1);
@@ -163,6 +164,10 @@
     color: white;
 }
 
+.p-song-links span{
+    font-family: "smart-ui";
+}
+
 .p-song-links a span {
     color: #1B1B1E;
     transition: all 0.2s;
@@ -170,4 +175,5 @@
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
+    font-family: "smart-ui";
 }
