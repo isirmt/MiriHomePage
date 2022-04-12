@@ -1,7 +1,72 @@
 .p-list {
     background-color: transparent;
-    width: 80%;
+    width: min(75vw, 100vh);
     height: auto;
     margin: 0 auto;
     position: relative;
+}
+
+.p-song {
+    background-color: #D8DBE2;
+    padding: min(2vw, 2vh);
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    font-size: min(2vw, 2vh);
+    border-radius: min(0.7vw, 0.7vh);
+    -webkit-border-radius: min(0.7vw, 0.7vh);
+    -moz-border-radius: min(0.7vw, 0.7vh);
+    -ms-border-radius: min(0.7vw, 0.7vh);
+    -o-border-radius: min(0.7vw, 0.7vh);
+    margin-bottom : min(2vw, 2vh);
+}
+
+.p-song-title {
+    width: 50%
+}
+
+.p-song-title p{
+    color: black;
+    display:flex;
+    margin-bottom: min(0.5vw, 0.5vh);
+}
+
+.p-song-title p:nth-child(1){
+    font-size: min(3vw, 3vh);
+}
+
+.p-song-title p:nth-child(2){
+    position: relative;
+    left: min(0.5vw, 0.5vh);
+}
+
+.p-song-links a{
+    border-style: solid;
+    border-width: min(0.2vw, 0.2vh);
+    border-color: #1B1B1E;
+    text-decoration: none;
+    padding: 0 min(1vw, 1vh);
+    background-color: transparent;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.p-song-links a:hover{
+    background-color: #1B1B1E;
+}
+
+.p-song-links a:hover span{
+    color: white;
+}
+
+.p-song-links a span {
+    color: #1B1B1E;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
 }

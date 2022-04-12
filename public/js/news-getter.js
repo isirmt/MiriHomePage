@@ -7,7 +7,7 @@ const date = [
 ];
 
 date.forEach(async (elem, i) => {
-    fetch("https://miri-home-page.vercel.app/article/" + elem).then(res => res.text()).then(text => {
+    fetch("https://itomiri.com/article/" + elem).then(res => res.text()).then(text => {
         const el = new DOMParser().parseFromString(text, "text/html")
         const head_els = (el.head.children)
         Array.from(head_els).map(v => {
