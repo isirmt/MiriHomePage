@@ -19,7 +19,7 @@
     -moz-border-radius: min(0.7vw, 0.7vh);
     -ms-border-radius: min(0.7vw, 0.7vh);
     -o-border-radius: min(0.7vw, 0.7vh);
-    margin-bottom : min(2vw, 2vh);
+    margin-bottom: min(2vw, 2vh);
     counter-increment: songs-number;
     z-index: 103;
     transition: all 0.2s 0.2s;
@@ -29,24 +29,103 @@
     -o-transition: all 0.2s 0.2s;
 }
 
-.p-song:hover {
-    margin: min(5vw, 5vh) 0;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
+@media (min-width: 768px) {
+    .p-song::before {
+        content: counter(songs-number);
+        position: absolute;
+        left: calc((min(6vw, 6vh)) * -1);
+        top: calc((min(1vw, 1vh)) * -1);
+        color: #555555;
+        font-weight: bold;
+        font-size: min(7vw, 7vh);
+        z-index: 102;
+    }
+
+    .p-song:hover {
+        margin: min(5vw, 5vh) 0;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+    }
+    .p-song-title {
+        width: 50%
+    }
+
+    .p-song-links a {
+        border-style: solid;
+        height: auto;
+        border-width: min(0.2vw, 0.2vh);
+        border-color: #1B1B1E;
+        text-decoration: none;
+        padding: 0 min(1vw, 1vh);
+        background-color: transparent;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+    }
+
+    .p-song-title p:nth-child(1) {
+        font-size: min(3vw, 3vh);
+    }
 }
 
-.p-song::before {
-    content: counter(songs-number);
-    position: absolute;
-    left: calc((min(6vw, 6vh)) * -1);
-    top: calc((min(1vw, 1vh)) * -1);
-    color: #555555;
-    font-weight: bold;
-    font-size:min(7vw, 7vh);
-    z-index: 102;
+@media (max-width: 767px) {
+    .p-list {
+        background-color: transparent;
+        width: min(100%, 100vh);
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        counter-reset: songs-number;
+    }
+    .p-song {
+        background-color: #D8DBE2;
+        padding: min(2vw, 2vh);
+        justify-content:center;
+        text-align: center;
+        display: block;
+        position: relative;
+        font-size: min(3vw, 3vh);
+        border-radius: 0;
+        margin-bottom: 0;
+        counter-increment: songs-number;
+        z-index: 103;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+
+    .p-song-title {
+        width: 100%
+    }
+
+    .p-song-links {
+        margin-top: min(3vw, 3vh);
+    }
+
+    .p-song-links>span {
+        display: none;
+    }
+
+    .p-song-links a {
+        border-style: solid;
+        height: 100%;
+        border-width: min(0.2vw, 0.2vh);
+        padding: 0 min(1vw, 1vh);
+        border-color: #1B1B1E;
+        text-decoration: none;
+        background-color: transparent;
+        font-size: min(3.5vw, 3.5vh);
+    }
+
+    .p-song-title p:nth-child(1) {
+        font-size: min(4vw, 4vh);
+    }
 }
 
 .p-song:nth-child(3n-2) {
@@ -61,44 +140,26 @@
     background-color: #dae6da;
 }
 
-.p-song-title {
-    width: 50%
-}
 
-.p-song-title p{
+
+.p-song-title p {
     color: black;
-    display:flex;
+    display: flex;
     margin-bottom: min(0.5vw, 0.5vh);
 }
 
-.p-song-title p:nth-child(1){
-    font-size: min(3vw, 3vh);
-}
 
-.p-song-title p:nth-child(2){
+
+.p-song-title p:nth-child(2) {
     position: relative;
     left: min(0.5vw, 0.5vh);
 }
 
-.p-song-links a{
-    border-style: solid;
-    border-width: min(0.2vw, 0.2vh);
-    border-color: #1B1B1E;
-    text-decoration: none;
-    padding: 0 min(1vw, 1vh);
-    background-color: transparent;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-}
-
-.p-song-links a:hover{
+.p-song-links a:hover {
     background-color: #1B1B1E;
 }
 
-.p-song-links a:hover span{
+.p-song-links a:hover span {
     color: white;
 }
 
