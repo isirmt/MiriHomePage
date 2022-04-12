@@ -4,6 +4,7 @@
     height: auto;
     margin: 0 auto;
     position: relative;
+    counter-reset: songs-number;
 }
 
 .p-song {
@@ -19,6 +20,45 @@
     -ms-border-radius: min(0.7vw, 0.7vh);
     -o-border-radius: min(0.7vw, 0.7vh);
     margin-bottom : min(2vw, 2vh);
+    counter-increment: songs-number;
+    z-index: 103;
+    transition: all 0.2s 0.2s;
+    -webkit-transition: all 0.2s 0.2s;
+    -moz-transition: all 0.2s 0.2s;
+    -ms-transition: all 0.2s 0.2s;
+    -o-transition: all 0.2s 0.2s;
+}
+
+.p-song:hover {
+    margin: min(5vw, 5vh) 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+.p-song::before {
+    content: counter(songs-number);
+    position: absolute;
+    left: calc((min(6vw, 6vh)) * -1);
+    top: calc((min(1vw, 1vh)) * -1);
+    color: #555555;
+    font-weight: bold;
+    font-size:min(7vw, 7vh);
+    z-index: 102;
+}
+
+.p-song:nth-child(3n-2) {
+    background-color: #f1e2f1;
+}
+
+.p-song:nth-child(3n-1) {
+    background-color: #ccdfe7;
+}
+
+.p-song:nth-child(3n) {
+    background-color: #dae6da;
 }
 
 .p-song-title {
